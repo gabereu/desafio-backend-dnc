@@ -1,5 +1,5 @@
 import request from "supertest";
-import { server } from "../main/server";
+import { server } from "../main/application/server";
 
 describe("Teste server", () => {
     test("It should response /test path",async () => {

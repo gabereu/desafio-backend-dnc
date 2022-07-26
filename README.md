@@ -13,3 +13,13 @@ Sistema de presenças para funcionários com possibilidade de gestão via admini
   - [ ] alterar uma presença
   - [ ] criar uma presença
   - [ ] deletar uma presença
+
+## Estrutura de pastas
+    src
+    ├── main                  # Arquivos do sistema  
+    │   ├── application       # Camada de aplicação
+    │   ├── domain            # Camada de domínio
+    │   ├── infra             # Camada de infraestrutura
+    │   └── shared            # Código compartilhável entre domínio e aplicação  
+    └── tests                 # Arquivos de teste
+        └── (mesmo esquema da pasta main com os arquivos de testes)
