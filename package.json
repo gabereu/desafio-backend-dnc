@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "swc src -d dist",
     "build-dev": "npm run build && NODE_ENV=development node --inspect dist/main/application/index.js",

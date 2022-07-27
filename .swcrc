@@ -15,6 +15,9 @@
         "@infra/*": ["./src/main/infra/*"]
       }
     },
+    "module": {
+      "type": "commonjs"
+    },
     "env": {
       "targets": {
         "node": 16
