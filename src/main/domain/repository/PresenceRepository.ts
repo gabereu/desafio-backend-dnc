@@ -3,7 +3,7 @@ import { Presence } from "../models/Presence";
 import { User } from "../models/User";
 
 export interface PresenceRepository {
-    findById(id: string): Promise<Presence>;
+    findById(id: string): Promise<Presence | null>;
 
     findByUser(user: User): Promise<Presence[]>;
     findByUserBetweenDates(user: User, fromDate: Date, toDate: Date): Promise<Presence[]>;
