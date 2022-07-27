@@ -5,9 +5,9 @@ import { AdministratorService } from '@domain/service/AdministratorService';
 
 const fakeAdmin = () => ({ id: '0', username: 'username' } as Administrator);
 
-describe("UserService", () => {
+describe("AdministratorService", () => {
 
-    it("Should correct login an already created user", async () => {
+    it("Should correct login an already created administrator", async () => {
         const administratorRepositoryMock = mock<AdministratorRepository>();
 
         const administratorService = new AdministratorService(administratorRepositoryMock);
@@ -23,7 +23,7 @@ describe("UserService", () => {
 
     });
 
-    it("Should correct login a not already created user", async () => {
+    it("Should correct login a not already created administrator", async () => {
         const administratorRepositoryMock = mock<AdministratorRepository>();
 
         const administratorService = new AdministratorService(administratorRepositoryMock);
