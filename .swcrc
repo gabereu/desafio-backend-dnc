@@ -12,7 +12,8 @@
       "paths": {
         "@domain/*": ["./src/main/domain/*"],
         "@application/*": ["./src/main/application/*"],
-        "@infra/*": ["./src/main/infra/*"]
+        "@infra/*": ["./src/main/infra/*"],
+        "@tests/*": ["./src/tests/*"]
       }
     },
     "module": {
