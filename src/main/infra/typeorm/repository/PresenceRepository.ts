@@ -1,13 +1,15 @@
 import { Presence as IPresence } from '@domain/models/Presence';
 import { User } from '@domain/models/User';
 import { PresenceRepository as IPresenceRepository, PresenceToSave } from '@domain/repository/PresenceRepository'
+import { inject, injectable } from 'inversify';
 import { Between, DataSource } from 'typeorm';
 import { Presence } from '../models/Presence';
 
+@injectable()
 export class PresenceRepository implements IPresenceRepository {
 
     constructor(
-        private dataSource: DataSource,
+        @inject(DataSource) private dataSource: DataSource,
     ) {}
 
     public async findById(id: string): Promise<IPresence | null> {

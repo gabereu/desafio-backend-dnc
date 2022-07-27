@@ -12,3 +12,5 @@ export interface UserRepository {
 export interface UserToSave extends Optional<User, 'id'>{
 
 }
+
+export const UserRepositorySymbol = Symbol("UserRepository");

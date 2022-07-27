@@ -1,16 +1,18 @@
 import { Presence } from "@domain/models/Presence";
-import { AdministratorRepository } from "@domain/repository/AdministratorRepository";
-import { PresenceRepository } from "@domain/repository/PresenceRepository";
-import { UserRepository } from "@domain/repository/UserRepository";
+import { AdministratorRepository, AdministratorRepositorySymbol } from "@domain/repository/AdministratorRepository";
+import { PresenceRepository, PresenceRepositorySymbol } from "@domain/repository/PresenceRepository";
+import { UserRepository, UserRepositorySymbol } from "@domain/repository/UserRepository";
 import { PresenceService } from "@domain/service/PresenceService";
+import { inject, injectable } from "inversify";
 
+@injectable()
 export class PresenceController {
 
     constructor(
-        private presenceService: PresenceService,
-        private presenceRepository: PresenceRepository,
-        private userRepository: UserRepository,
-        private administratorRepository: AdministratorRepository,
+        @inject(PresenceService) private presenceService: PresenceService,
+        @inject(PresenceRepositorySymbol) private presenceRepository: PresenceRepository,
+        @inject(UserRepositorySymbol) private userRepository: UserRepository,
+        @inject(AdministratorRepositorySymbol) private administratorRepository: AdministratorRepository,
     ) {}
 
     public async registerPresenceFromUser(userId: string): Promise<Presence>{

@@ -1,9 +1,11 @@
+import { inject, injectable } from "inversify";
 import { User } from "../models/User";
-import { UserRepository } from "../repository/UserRepository";
+import { UserRepository, UserRepositorySymbol } from "../repository/UserRepository";
 
+@injectable()
 export class UserService {
     constructor(
-        private userRepository: UserRepository,
+        @inject(UserRepositorySymbol) private userRepository: UserRepository,
     ) {}
 
     public async login(cpf: string): Promise<User>{

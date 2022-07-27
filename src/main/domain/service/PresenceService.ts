@@ -1,11 +1,13 @@
+import { inject, injectable } from "inversify";
 import { Presence } from "../models/Presence";
 import { User } from "../models/User";
-import { PresenceRepository } from "../repository/PresenceRepository";
+import { PresenceRepository, PresenceRepositorySymbol } from "../repository/PresenceRepository";
 
+@injectable()
 export class PresenceService {
 
     constructor(
-        private presenceRepository: PresenceRepository,
+        @inject(PresenceRepositorySymbol) private presenceRepository: PresenceRepository,
     ) {}
 
     public async registerPresence(user: User, date?: Date ): Promise<Presence> {

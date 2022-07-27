@@ -18,4 +18,4 @@ export interface PresenceRepository {
 export interface PresenceToSave extends Optional<Presence, 'id'> {
 }
 
-
+export const PresenceRepositorySymbol = Symbol("PresenceRepository");

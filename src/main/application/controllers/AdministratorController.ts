@@ -1,9 +1,11 @@
 import { AdministratorService } from "@domain/service/AdministratorService";
+import { inject, injectable } from "inversify";
 
+@injectable()
 export class AdministratorController {
 
     constructor(
-        private administratorService: AdministratorService,
+        @inject(AdministratorService) private administratorService: AdministratorService,
     ) {}
 
     public async loginAdministrator(username: string): Promise<String> {

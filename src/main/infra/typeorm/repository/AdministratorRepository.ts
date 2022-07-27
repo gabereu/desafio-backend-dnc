@@ -1,12 +1,14 @@
 import { Administrator as IAdministrator } from "@domain/models/Administrator";
 import { AdministratorRepository as IAdministratorRepository, AdministratorToSave } from "@domain/repository/AdministratorRepository";
+import { inject, injectable } from "inversify";
 import { DataSource } from "typeorm";
 import { Administrator } from "../models/Administrator";
 
+@injectable()
 export class AdministratorRepository implements IAdministratorRepository {
 
     constructor(
-        private dataSource: DataSource,
+        @inject(DataSource) private dataSource: DataSource,
     ) {}
 
     public async findById(id: string): Promise<IAdministrator | null> {

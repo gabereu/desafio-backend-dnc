@@ -12,3 +12,5 @@ export interface AdministratorRepository {
 export interface AdministratorToSave extends Optional<Administrator, 'id'>{
 
 }
+
+export const AdministratorRepositorySymbol = Symbol("AdministratorRepository");

@@ -13,6 +13,7 @@
         "@domain/*": ["./src/main/domain/*"],
         "@application/*": ["./src/main/application/*"],
         "@infra/*": ["./src/main/infra/*"],
+        "@shared/*": ["./src/main/shared/*"],
         "@tests/*": ["./src/tests/*"]
       }
     },

@@ -1,9 +1,11 @@
+import { inject, injectable } from "inversify";
 import { Administrator} from "../models/Administrator";
-import { AdministratorRepository } from "../repository/AdministratorRepository";
+import { AdministratorRepository, AdministratorRepositorySymbol } from "../repository/AdministratorRepository";
 
+@injectable()
 export class AdministratorService {
     constructor(
-        private administratorRepository: AdministratorRepository,
+        @inject(AdministratorRepositorySymbol) private administratorRepository: AdministratorRepository,
     ) {}
 
     public async login(username: string): Promise<Administrator>{

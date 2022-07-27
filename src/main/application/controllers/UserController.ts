@@ -1,9 +1,11 @@
 import { UserService } from "@domain/service/UserService";
+import { inject, injectable } from "inversify";
 
+@injectable()
 export class UserController {
 
     constructor(
-        private userService: UserService,
+        @inject(UserService) private userService: UserService,
     ) {}
 
     public async loginUser(cpf: string): Promise<String> {

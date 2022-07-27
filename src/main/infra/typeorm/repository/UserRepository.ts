@@ -1,12 +1,14 @@
 import { User as IUser } from "@domain/models/User";
 import { UserRepository as IUserRepository, UserToSave } from "@domain/repository/UserRepository"
+import { inject, injectable } from "inversify";
 import { DataSource } from "typeorm";
 import { User } from "../models/User";
 
+@injectable()
 export class UserRepository implements IUserRepository {
 
     constructor(
-        private dataSource: DataSource,
+        @inject(DataSource) private dataSource: DataSource,
     ) {}
 
     public async findById(id: string): Promise<IUser | null> {
