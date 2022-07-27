@@ -1,7 +1,7 @@
 import { mock } from 'jest-mock-extended';
-import { Administrator} from '../../../main/domain/models/Administrator';
-import { AdministratorRepository } from '../../../main/domain/repository/AdministratorRepository';
-import { AdministratorService } from '../../../main/domain/service/AdministratorService';
+import { Administrator} from '@domain/models/Administrator';
+import { AdministratorRepository } from '@domain/repository/AdministratorRepository';
+import { AdministratorService } from '@domain/service/AdministratorService';
 
 const fakeAdmin = () => ({ id: '0', username: 'username' } as Administrator);
 
