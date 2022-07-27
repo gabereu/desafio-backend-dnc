@@ -1,5 +1,5 @@
 import { mock } from 'jest-mock-extended';
-import Administrator from '../../../main/domain/models/Administrator';
+import { Administrator} from '../../../main/domain/models/Administrator';
 import { AdministratorRepository } from '../../../main/domain/repository/AdministratorRepository';
 import { AdministratorService } from '../../../main/domain/service/AdministratorService';
 

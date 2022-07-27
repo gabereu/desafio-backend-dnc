@@ -1,4 +1,4 @@
-export default interface Administrator {
+export interface Administrator {
     id: string;
     username: string;
 }
