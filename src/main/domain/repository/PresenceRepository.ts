@@ -1,6 +1,6 @@
 import { Optional } from "utility-types";
-import { Presence } from "../models/Presence";
-import { User } from "../models/User";
+import { Presence } from "../models/Presence.js";
+import { User } from "../models/User.js";
 
 export interface PresenceRepository {
     findById(id: string): Promise<Presence | null>;

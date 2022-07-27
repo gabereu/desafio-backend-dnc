@@ -1,6 +1,6 @@
-import { Presence } from "../models/Presence";
-import { User } from "../models/User";
-import { PresenceRepository } from "../repository/PresenceRepository";
+import { Presence } from "../models/Presence.js";
+import { User } from "../models/User.js";
+import { PresenceRepository } from "../repository/PresenceRepository.js";
 
 export class PresenceService {
 
