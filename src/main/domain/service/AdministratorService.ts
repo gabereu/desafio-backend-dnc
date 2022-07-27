@@ -1,5 +1,5 @@
-import { Administrator} from "../models/Administrator.js";
-import { AdministratorRepository } from "../repository/AdministratorRepository.js";
+import { Administrator} from "../models/Administrator";
+import { AdministratorRepository } from "../repository/AdministratorRepository";
 
 export class AdministratorService {
     constructor(

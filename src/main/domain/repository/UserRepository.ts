@@ -1,5 +1,5 @@
 import { Optional } from "utility-types";
-import { User } from "../models/User.js";
+import { User } from "../models/User";
 
 export interface UserRepository {
     findById(id: string): Promise<User | null>;

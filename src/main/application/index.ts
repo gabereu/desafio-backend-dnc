@@ -1,6 +1,6 @@
 import "reflect-metadata";
-import "@infra/typeorm/app.js";
-import { server } from "./server.js";
+import "@infra/typeorm/app";
+import { server } from "./server";
 
 const PORT = 3000;
 

@@ -1,5 +1,5 @@
-import { User } from "../models/User.js";
-import { UserRepository } from "../repository/UserRepository.js";
+import { User } from "../models/User";
+import { UserRepository } from "../repository/UserRepository";
 
 export class UserService {
     constructor(

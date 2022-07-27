@@ -1,5 +1,5 @@
 import { Optional } from "utility-types";
-import { Administrator} from "../models/Administrator.js";
+import { Administrator} from "../models/Administrator";
 
 export interface AdministratorRepository {
     findById(id: string): Promise<Administrator | null>;
