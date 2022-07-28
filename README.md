@@ -5,14 +5,14 @@ Teste tecnico para vaga de Backend Developer Jr. na Escola DNC
 Sistema de presenças para funcionários com possibilidade de gestão via administradores
 
 ## Fluxo esperado
-- [ ] Usuário consegue 
-  - [ ] cadastrar sua presença
-  - [ ] Usuário consegue visualizar suas presenças registradas
-- [ ] Administrador consegue 
-  - [ ] visualizar todas as presenças
-  - [ ] alterar uma presença
-  - [ ] criar uma presença
-  - [ ] deletar uma presença
+- [x] Usuário consegue 
+  - [x] cadastrar sua presença
+  - [x] Usuário consegue visualizar suas presenças registradas
+- [x] Administrador consegue 
+  - [x] visualizar todas as presenças
+  - [x] alterar uma presença
+  - [x] criar uma presença
+  - [x] deletar uma presença
 
 ## Estrutura de pastas
     src
