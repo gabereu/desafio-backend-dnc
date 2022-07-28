@@ -1,5 +1,3 @@
-/* istanbul ignore next */
-
 import { Administrator } from "@infra/typeorm/models/Administrator";
 import { Presence } from "@infra/typeorm/models/Presence";
 import { User } from "@infra/typeorm/models/User";
