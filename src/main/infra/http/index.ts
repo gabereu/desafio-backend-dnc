@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import "@infra/typeorm/app";
 import { server } from "./server";
 

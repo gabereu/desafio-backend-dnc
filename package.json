@@ -6,9 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "build": "swc src -d dist",
-    "build-dev": "npm run build && NODE_ENV=development node --inspect dist/main/application/index.js",
+    "build-dev": "npm run build && NODE_ENV=development node --inspect dist/main/infra/http/index.js",
     "dev": "nodemon --ext ts --exec \"npm run build-dev\"",
-    "start": "npm run build && NODE_ENV=production node dist/main/application/index.js",
+    "start": "npm run build && NODE_ENV=production node dist/main/infra/http/index.js",
     "test": "jest --runInBand"
   },
   "keywords": [],
