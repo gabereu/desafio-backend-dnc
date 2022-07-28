@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "8109b1a8-aa51-4f3a-815f-0417d4cc3091",
+		"name": "Presence API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16482288"
+	},
+	"item": [
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\": \"cpf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/administrator/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"administrator",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User register presence",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\": \"cpf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/presence/user/{user.login}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presence",
+						"user",
+						"{user.login}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin register presence",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"{{$randomDatePast}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/presence/admin/{admin.login}/user/{user.login}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presence",
+						"admin",
+						"{admin.login}",
+						"user",
+						"{user.login}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User presences",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fromDate\": \"2022-07-26T23:22:04.732Z\",\r\n    \"toDate\": \"2022-07-30T23:22:04.732Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/presence/user/{user.id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presence",
+						"user",
+						"{user.id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All presences",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fromDate\": \"2022-07-26T23:22:04.732Z\",\r\n    \"toDate\": \"2022-07-30T23:22:04.732Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/presence/admin/{admin.login}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presence",
+						"admin",
+						"{admin.login}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update presence",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adminId\": \"1e8fdd43-f044-4f76-ba2c-4c023cb401d3\",\r\n    \"toDate\": \"2022-07-27T23:22:04.733Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/presence/{admin.login}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presence",
+						"{admin.login}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete presence",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adminId\": \"1e8fdd43-f044-4f76-ba2c-4c023cb401d3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/presence/{admin.login}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presence",
+						"{admin.login}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
